@@ -71,7 +71,6 @@ class: center, middle
 - Great way to get constructive feedback to the `submitter`
 - The `reviewer` should see this activity as a great way to learn from others
 
-<br> 
 
 ```{r, out.width='30%', fig.align='center', fig.cap='from https://doi.org/10.1111/jeb.14230', echo=FALSE}
 knitr::include_graphics('images/4rs.png')
