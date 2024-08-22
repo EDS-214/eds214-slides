@@ -3,7 +3,7 @@ title: "Acessing Data in a Programmatic Way"
 subtitle: "APIs and more"
 author: "Julien Brun"
 institute: "UCSB"
-date: "2023/08"
+date: "2024/08"
 output:
   xaringan::moon_reader:
     css: [default, metropolis, metropolis-fonts]
@@ -75,7 +75,7 @@ IP numbers can be difficult to remember, so the Internet also has a way of assig
 
 - Clients first look up a hostname in DNS to find the IP Number
 
-- `taylor.bren.ucsb.edu` -> 128.111.??.?? (Can you check!?)
+- `workbench-1.bren.ucsb.edu` -> 128.111.??.?? (Can you check!?)
 
 - Then they open a connection to the IP Number
 
@@ -119,7 +119,7 @@ Status codes:
 - `2xx`: Successful; most known is 200: OK, request was successfully processed
 - `3xx`: Redirection
 - `4xx`: Client Error; the famous 404: resource not found
-- `5xx`: Server Error
+- `5xx`: Server Error; you might have encounter the 503.. server is down :/ 
 
 ---
 
@@ -156,7 +156,7 @@ For example, get the latest Tweets on a specific topic or list all the issues on
 
 A lot of data provider use this type of API.
 
-REST stands for _Representational State Transfer_.  Those APIs a some similarities:
+REST stands for _Representational State Transfer_.  Those APIs have some similarities:
 
 - Use HTTP methods explicitly. These are GET, PUT, POST, DELETE
 
@@ -256,7 +256,7 @@ class: center, middle, inverse
 
 # The  R_aw  way
 
-`httr` (httr2 is around the corner!) is an R package that let's you send requests to web services.  Let's try to use the GitHub API to list all my repositories
+`httr2` is an R package that let's you send requests to web services.  Let's try to use the GitHub API to list all my repositories
 
 ```{r}
 library(httr)
@@ -300,17 +300,6 @@ There are many R packages out there that will let you interact with APIs in a ve
 
 - Check Data Provider on GitHub! e.g. https://github.com/USGS-R/dataRetrieval
 
----
-
-# Exercise
-
-Plot the discharge time-series for the Ventura River from 2019-10-01 to 2020-09-30 
-
-Webpage: https://waterdata.usgs.gov/nwis/uv?site_no=11118500
-
-Tutorial for `dataRetrieval`: 
-https://cran.r-project.org/web/packages/dataRetrieval/vignettes/dataRetrieval.html#daily-data
-
 
 ---
 
@@ -340,6 +329,17 @@ Since you are using a web service, you have now a few more moving parts that can
 Please always check that the data you are scraping is publicly available  and that there is no personal or confidential information gathered. Also please do not overload the web server you are scraping
 
 
+---
 
+# Exercise
+
+Plot the discharge time-series for the Ventura River from 2019-10-01 to 2020-09-30 
+
+Webpage: https://waterdata.usgs.gov/nwis/uv?site_no=11118500
+
+Tutorial for `dataRetrieval`: 
+https://cran.r-project.org/web/packages/dataRetrieval/vignettes/dataRetrieval.html#daily-data
+
+Repository: https://github.com/EDS-214/eds214-handson-api
 
 
